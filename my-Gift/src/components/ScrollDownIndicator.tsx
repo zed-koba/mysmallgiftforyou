@@ -3,12 +3,10 @@ import { ChevronsDown } from 'lucide-react';
 
 interface ScrollDownIndicatorProps {
 	targetId: string; // ID of the section to scroll to
-	setClickedScroll: (clickedScroll: boolean) => void;
 }
 
 const ScrollDownIndicator: React.FC<ScrollDownIndicatorProps> = ({
 	targetId,
-	setClickedScroll,
 }) => {
 	const handleClick = () => {
 		const target = document.getElementById(targetId);
@@ -16,7 +14,6 @@ const ScrollDownIndicator: React.FC<ScrollDownIndicatorProps> = ({
 		if (target) {
 			target.scrollIntoView({ behavior: 'smooth' });
 		}
-		setClickedScroll(true);
 	};
 
 	return (

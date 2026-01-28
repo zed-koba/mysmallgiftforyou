@@ -3,40 +3,8 @@ import OpeningSection from '@/components/OpeningSection';
 import PoemSection from '@/components/PoemSection';
 import MessageSection from '@/components/MessageSection';
 import ClosingSection from '@/components/ClosingSection';
-import { useState } from 'react';
 
 const Index = () => {
-	const [clickedScroll, setClickedScroll] = useState(false);
-	const poem1 = [
-		'"Her"',
-		'I like going home but i would rather be with you instead',
-		'Because I dont want to spend the rest of my life',
-		'Wondering where our story could have led',
-		'I think you really beautiful',
-		'But when i hear your beauty speak',
-		'My mind grips at chairs as my knees begin to weak',
-		'',
-		'I always see you with mask until I saw the smile of you',
-		'Now my gallery is full of art mesmerized by someone I wish I knew',
-		"I've never been good at poetry but if poetry can talk",
-		'every stanza would have your smile',
-		'every rhyme would have your walk',
-		'',
-		'I think your smile are incredible',
-		'If incredible meant worthy of being known',
-		"I'd love to prove to you the way love feels when its consistenly shown",
-		'I know you dont know me that much but if my heart was a tetris game',
-		'The existence of all my worries just disappeared just by hearing your name',
-		'',
-		"I think you're really funny but not in look or time",
-		'the kind of funny i fall in love with that makes a bald man need to rhyme',
-		'every time you show up on school or my mesmerized gaze noticed',
-		'I melt at the sight of you like butter on bread freshly toasted',
-		'',
-		"I know you are single so i'd like to inquire about your heart",
-		"I dont know how to convince you I'm worth it",
-		'but this seemed like a good start.',
-	];
 	const poems = [
 		[
 			'"Her"',
@@ -112,7 +80,7 @@ const Index = () => {
 	return (
 		<main className="min-h-screen bg-background selection:bg-primary/20 selection:text-foreground">
 			<MusicToggle />
-			<OpeningSection setClickedScroll={setClickedScroll} />
+			<OpeningSection />
 			{poems.map((poem, index) => (
 				<PoemSection key={index} poem={poem} />
 			))}

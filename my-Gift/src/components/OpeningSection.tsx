@@ -2,10 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 import ScrollDownIndicator from './ScrollDownIndicator';
 
-type OpeningSectionProps = {
-	setClickedScroll: (clickedScroll: boolean) => void;
-};
-const OpeningSection = ({ setClickedScroll }: OpeningSectionProps) => {
+const OpeningSection = () => {
 	return (
 		<section className="min-h-screen flex flex-col items-center justify-center px-6 py-20">
 			<motion.div
